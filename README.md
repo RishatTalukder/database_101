@@ -79,3 +79,17 @@ con.commit() # this will add the data into the database
 print(res.fetchall())
     
 ```
+
+## How to delete a row from a table in sqlite3
+
+```SQL
+
+DELETE FROM table_name WHERE column_name = value;
+
+```
+
+> Here the DELETE from command is used to tell the database that we want to delete a row from the table.
+
+
+Where is the keyword for conditions, which is used to specify the condition for the rows to be deleted.
+
