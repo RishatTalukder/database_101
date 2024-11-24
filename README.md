@@ -43,7 +43,9 @@ CREATE TABLE table_name(column1 INTEGER, column2 TEXT, column3 REAL);
 ```
 
 `TEXT = string`
+
 `INTEGER = integer`
+
 `REAL = float`
 
 > If the input is not of the correct type, it will be converted to the correct type.( for real and integer)
