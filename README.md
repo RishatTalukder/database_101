@@ -93,3 +93,16 @@ DELETE FROM table_name WHERE column_name = value;
 
 Where is the keyword for conditions, which is used to specify the condition for the rows to be deleted.
 
+## How to INSERT multiple data at once in sqlite3
+
+```SQL
+INSERT INTO table_name values (value1, value2, value3), (value1, value2, value3), (value1, value2, value3), ...;
+```
+
+## How to set a column as a primary key in sqlite3
+
+- Rename the existing table
+- make a new table with the same name as the old table
+- set the primary key in the new table
+- Copy the whole data from the old table.
+- remove the whole table.

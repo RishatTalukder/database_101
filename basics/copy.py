@@ -18,14 +18,23 @@ cur = con.cursor()
 
 # cur.execute("UPDATE employee SET ID = 6 WHERE name = 'John'")
 
-cur.execute("DELETE FROM employee WHERE age = 30")
+# renaming the table
+cur.execute("ALTER TABLE employee RENAME TO employee_old")
+
+# creating a new table
+cur.execute("CREATE TABLE employee (name TEXT, age INTEGER, SALARY REAL, department TEXT, ID INTEGER PRIMARY KEY)")
+
+# copying the data from the old table to the new table
+cur.execute("INSERT INTO employee SELECT * FROM employee_old")
+
+# removing the old table
+cur.execute("DROP TABLE employee_old")
 
 cur.execute("SELECT * FROM employee")
 
 print(cur.fetchall())
 
 con.commit()
-
 
 # - Rename the existing table
 # - make a new table with the same name as the old table
